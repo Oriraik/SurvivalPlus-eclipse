@@ -1,0 +1,6 @@
+name: SurvivalPlus
+version: 1.0.0
+main: rainifuns.survival.Main
+api-version: 1.13
+commands:
+  survivalplus:

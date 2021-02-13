@@ -1,0 +1,24 @@
+########################
+#     SurvivalPlus     #
+#                      #
+#     By RainIFunS     #
+########################
+
+player:
+#玩家的血量
+player-health: 4.0
+#玩家最多死亡次数
+max-dead: 3
+#怪物出生自带帽子
+monster-hat: true
+#帽子类别
+hat-material: GLASS
+#支持颜色代码 & ，变量试用于下列所有message
+# %dead% 玩家剩余的死亡次数
+# %player% 玩家的名字
+
+#当玩家只剩最后一条命时提示
+last-dead-message: "&c这是你最后一条命了"
+dead-message: "&c你当前剩余&f%dead%&c次死亡机会"
+#玩家踢出服务器的消息提示
+kick-message: "&d您的死亡次数已用尽"
