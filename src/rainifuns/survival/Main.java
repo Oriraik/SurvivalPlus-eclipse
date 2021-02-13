@@ -20,6 +20,7 @@ public class Main extends JavaPlugin{
 	getServer().getConsoleSender().sendMessage(prefixA + "²å¼şÒÑ¼ÓÔØ");
 	DataManager.initConfig();
 	regEvent();
+	getServer().getPluginCommand("survivalplus").setExecutor(new SuCommand());
     }
     
     @Override

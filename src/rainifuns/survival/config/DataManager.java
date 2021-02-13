@@ -30,6 +30,19 @@ public class DataManager {
 	Obituary.put(name, 0);
     }
     
+//    减少玩家的死亡次数
+    public static void delDeadCount(String player_name, Integer number) {
+	Integer i = Obituary.get(player_name)-number;
+	if (i<0) i=0;
+	setPlayerDead(player_name, i);
+    }
+    
+//    设置玩家的死亡次数
+    public static void setPlayerDead(String name, Integer i) {
+	addNewPlayer(name);
+	Obituary.put(name, i);
+    }
+    
 //    返回玩家是否已经在Map中
     public static boolean isContain(String name) {
 	if (Obituary.containsKey(name)) return true;
