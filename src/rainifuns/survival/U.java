@@ -30,6 +30,7 @@ public class U {
 	message = message.replaceAll("&", "¡ì");
 	message = message.replaceAll("%player%", player_name);
 	int dead = ((Bian.max_dead-DataManager.getDead(player_name))<0)?0:Bian.max_dead-DataManager.getDead(player_name);
+	message = message.replaceAll("%dead-2%", DataManager.getDead(player_name)+"");
 	message = message.replaceAll("%dead%", dead+"");
 	
 	return message;

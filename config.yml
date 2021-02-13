@@ -16,11 +16,12 @@ hat-material: GLASS
 #支持颜色代码 & ，变量试用于下列所有message
 # %dead% 玩家剩余的死亡次数
 # %player% 玩家的名字
+# %dead-2% 玩家累计死亡次数
 
 #当玩家只剩最后一条命时提示
 last-dead-message: "&c这是你最后一条命了"
 dead-message: "&c你当前剩余&f%dead%&c次死亡机会"
 #玩家踢出服务器的消息提示
 kick-message: "&d您的死亡次数已用尽"
-set-comm-message: "&6你的死亡次数被重新设置为&a%dead%&6次"
-del-comm-message: "&6你的死亡次数减少至&a%dead%&6次"
+set-comm-message: "&6你的死亡累计次数被重新设置为&a%dead%&6次"
+del-comm-message: "&6你的死亡累计次数减少至&a%dead%&6次"
