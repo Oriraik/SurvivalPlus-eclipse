@@ -6,6 +6,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
 
 import rainifuns.survival.Main;
+import rainifuns.survival.U;
 import rainifuns.survival.config.Bian;
 import rainifuns.survival.config.DataManager;
 
@@ -19,11 +20,11 @@ public class PlayerDead implements Listener {
 	int a = Bian.max_dead;
 	int b = DataManager.getDead(p.getName());
 	if (b==a) {//还剩最后一条命
-	    p.sendMessage(Bian.last_dead_message);
+	    p.sendMessage(U.remake(Bian.last_dead_message, p.getName()));
 	}else if (b<a) {//还有死亡的机会
-	    p.sendMessage(Bian.dead_message.replaceAll("%dead%", String.valueOf(a-b)));
+	    p.sendMessage(U.remake(Bian.dead_message, p.getName()));
 	}else {//没有死亡机会了
-	    p.kickPlayer(Bian.kick_message);
+	    p.kickPlayer(U.remake(Bian.dead_message, p.getName()));
 	}
     }
     

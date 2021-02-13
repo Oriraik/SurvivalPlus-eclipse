@@ -49,9 +49,9 @@ public class SuCommand implements CommandExecutor {
     
     
     public void help(CommandSender sender) {
-	sender.sendMessage("===========指令错误 帮助如下============");
-	sender.sendMessage("/survivalplus set <name> <number>  设置玩家的累计死亡次数");
-	sender.sendMessage("/survivalplus del <name> <number>  减少玩家的累计死亡次数");
-	sender.sendMessage("=================================");
+	sender.sendMessage("§e===========§6指令错误 帮助如下§e============");
+	sender.sendMessage("§a/survivalplus set <name> <number>  §d设置玩家的累计死亡次数");
+	sender.sendMessage("§a/survivalplus del <name> <number>  §d减少玩家的累计死亡次数");
+	sender.sendMessage("§e=================================");
     }
 }
