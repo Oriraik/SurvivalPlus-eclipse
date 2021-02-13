@@ -6,6 +6,12 @@
 
 #玩家数据
 player:
+#服务器外的玩家是否可以用旁观者的身份加入服务器
+spectator-enable: true
+#死亡次数到达上限的玩家是踢出服务器，还是转为旁观者模式，true为踢出服务器
+spectator-is-kick: true
+#立即重生
+respawn-force: true
 #玩家的血量
 player-health: 4.0
 #玩家最多死亡次数
@@ -24,5 +30,7 @@ last-dead-message: "&c这是你最后一条命了"
 dead-message: "&c你当前剩余&f%dead%&c次死亡机会"
 #玩家踢出服务器的消息提示
 kick-message: "&d您的死亡次数已用尽"
+#set指令的消息提示
 set-comm-message: "&6你的死亡累计次数被重新设置为&a%dead-2%&6次"
+#del指令的消息提示
 del-comm-message: "&6你的死亡累计次数减少至&a%dead-2%&6次"
