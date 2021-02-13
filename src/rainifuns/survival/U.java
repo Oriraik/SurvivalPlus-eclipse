@@ -3,6 +3,7 @@ package rainifuns.survival;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.entity.Player;
 
+import rainifuns.survival.config.Bian;
 import rainifuns.survival.config.DataManager;
 
 // π§æﬂ¿‡
@@ -28,7 +29,8 @@ public class U {
 	
 	message = message.replaceAll("&", "°Ï");
 	message = message.replaceAll("%player%", player_name);
-	message = message.replaceAll("%dead%", DataManager.getDead(player_name)+"");
+	int dead = ((Bian.max_dead-DataManager.getDead(player_name))<0)?0:Bian.max_dead-DataManager.getDead(player_name);
+	message = message.replaceAll("%dead%", dead+"");
 	
 	return message;
     }
