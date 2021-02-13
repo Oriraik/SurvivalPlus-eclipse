@@ -4,6 +4,7 @@
 #     By RainIFunS     #
 ########################
 
+#玩家数据
 player:
 #玩家的血量
 player-health: 4.0

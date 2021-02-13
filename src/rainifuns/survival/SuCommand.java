@@ -3,6 +3,7 @@ package rainifuns.survival;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 
 import rainifuns.survival.config.Bian;
 import rainifuns.survival.config.DataManager;
@@ -11,6 +12,11 @@ public class SuCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command arg1, String arg2, String[] args) {
+	
+	if (sender instanceof Player) {
+	    Player p = (Player) sender;
+	    if (!p.isOp()) return false;
+	}
 	
 	if (args.length==3) {
 	    
