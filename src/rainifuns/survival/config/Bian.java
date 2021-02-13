@@ -15,6 +15,8 @@ public class Bian {
     public static String dead_message = "你当前剩余%dead%次死亡机会";
     public static String kick_message = "您的死亡次数已用尽";
     public static String hat_material = "GLASS";
+    public static String set_comm_message = "&6你的死亡次数被重新设置为&a%dead%&6次";
+    public static String del_comm_message = "&6你的死亡次数减少至&a%dead%&6次";
     
     public static void getBianFromConfig() {
 	max_dead = DataManager.getConfig().getInt("max-dead");
@@ -23,6 +25,8 @@ public class Bian {
 	dead_message = DataManager.getConfig().getString("dead-message");
 	kick_message = DataManager.getConfig().getString("kick-message");
 	hat_material = DataManager.getConfig().getString("hat-material");
+	set_comm_message = DataManager.getConfig().getString("set-comm-message");
+	del_comm_message = DataManager.getConfig().getString("del-comm-message");
 	try {
 	    Material.getMaterial(hat_material);
 	} catch (Exception e) {

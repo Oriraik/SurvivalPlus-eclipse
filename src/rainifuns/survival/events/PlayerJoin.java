@@ -20,7 +20,7 @@ public class PlayerJoin implements Listener {
 	U.setHealth(p, Bian.player_health);
 	//如果死亡次数大于配置就踢出去
 	if (DataManager.getDead(p.getName())>Bian.max_dead) {
-	    p.kickPlayer(Bian.kick_message);
+	    p.kickPlayer(U.remake(Bian.kick_message, p.getName()));
 	}
 	
     }

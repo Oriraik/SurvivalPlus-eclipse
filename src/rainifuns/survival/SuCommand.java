@@ -4,6 +4,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
+import rainifuns.survival.config.Bian;
 import rainifuns.survival.config.DataManager;
 
 public class SuCommand implements CommandExecutor {
@@ -20,6 +21,7 @@ public class SuCommand implements CommandExecutor {
 		    String player = args[1];
 		    int dead = Integer.valueOf(args[2]);
 		    DataManager.setPlayerDead(player, dead);
+		    sender.sendMessage(U.remake(Bian.set_comm_message, player));
 		} catch (Exception e) {
 		    sender.sendMessage(Main.prefixC + "你输入的数字可能有误 ");
 		    help(sender);
@@ -30,6 +32,7 @@ public class SuCommand implements CommandExecutor {
 		    String player = args[1];
 		    int dead = Integer.valueOf(args[2]);
 		    DataManager.delDeadCount(player, dead);
+		    sender.sendMessage(U.remake(Bian.del_comm_message, player));
 		} catch (Exception e) {
 		    sender.sendMessage(Main.prefixC + "你输入的数字可能有误 ");
 		    help(sender);
